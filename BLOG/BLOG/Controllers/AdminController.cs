@@ -6,12 +6,16 @@ using System.Web.Mvc;
 
 namespace BLOG.Controllers
 {
-    public class AdminFrontendController : Controller
+    public class AdminController : Controller
     {
         //
         // GET: /AdminFrontend/
 
-        public ActionResult AdmFrontend()
+        public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult Comments()
         {
             return View();
         }

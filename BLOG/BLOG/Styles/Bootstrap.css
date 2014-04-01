@@ -2995,7 +2995,8 @@ input[type="button"].btn-block {
 }
 .dropdown-toggle:focus {
   outline: 0;
-}
+}   
+/*                             dropmenu                         */
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -3815,7 +3816,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-nav.navbar-right:last-child {
     margin-right: -15px;
+    
   }
+  
+
+  
 }
 @media (min-width: 768px) {
   .navbar-left {
@@ -3823,6 +3828,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-right {
     float: right !important;
+   
   }
 }
 .navbar-form {
