@@ -8,6 +8,6 @@ namespace BLOG.Models
 {
     public class Application_Db : DbContext
     {
-        public DbSet<Administrador> administrador { get; set; }
+        public DbSet<Blogger> administrador { get; set; }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLOG", "BLOG\BLOG.csproj", "{D885B2D5-F75A-4A91-94CC-A340463F1E13}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLOG", "BLOG\BLOG.csproj", "{B1AE08A4-7CF8-4B64-924E-5A321F24539A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D885B2D5-F75A-4A91-94CC-A340463F1E13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D885B2D5-F75A-4A91-94CC-A340463F1E13}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D885B2D5-F75A-4A91-94CC-A340463F1E13}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D885B2D5-F75A-4A91-94CC-A340463F1E13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1AE08A4-7CF8-4B64-924E-5A321F24539A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1AE08A4-7CF8-4B64-924E-5A321F24539A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1AE08A4-7CF8-4B64-924E-5A321F24539A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1AE08A4-7CF8-4B64-924E-5A321F24539A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
