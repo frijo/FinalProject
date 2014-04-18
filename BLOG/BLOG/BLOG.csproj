@@ -172,6 +172,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\BackGrounds\BackGround.jpg" />
+    <Content Include="Content\BackGrounds\BackGround1.jpg" />
+    <Content Include="Content\BackGrounds\BackGround10.jpg" />
+    <Content Include="Content\BackGrounds\BackGround11.jpg" />
+    <Content Include="Content\BackGrounds\BackGround12.jpg" />
+    <Content Include="Content\BackGrounds\BackGround13.jpg" />
+    <Content Include="Content\BackGrounds\BackGround2.jpg" />
+    <Content Include="Content\BackGrounds\BackGround3.jpg" />
+    <Content Include="Content\BackGrounds\BackGround4.jpg" />
+    <Content Include="Content\BackGrounds\BackGround5.jpg" />
+    <Content Include="Content\BackGrounds\BackGround6.jpg" />
+    <Content Include="Content\BackGrounds\BackGround7.jpg" />
+    <Content Include="Content\BackGrounds\BackGround8.jpg" />
+    <Content Include="Content\BackGrounds\BackGround9.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -245,6 +259,7 @@
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Styles\Bootstrap.css" />
     <Content Include="Styles\Bootstrap.min.css" />
+    <Content Include="Styles\Style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -268,7 +283,7 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Acount\Login.cshtml" />
+    <Content Include="Views\Acount\Create.cshtml" />
     <Content Include="Views\Admin\Comments.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmFrontend.cshtml" />
