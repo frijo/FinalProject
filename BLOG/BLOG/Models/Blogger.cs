@@ -7,6 +7,7 @@ namespace BLOG.Models
 {
     public class Blogger
     {
+        public int ID { get; set; }
         public String NickName { get; set; }
         public String password { get; set; }
         public String Name { get; set; }

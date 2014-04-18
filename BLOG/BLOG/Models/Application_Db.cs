@@ -13,6 +13,6 @@ namespace BLOG.Models
         {
 
         }
-        public DbSet<Blogger> administrador { get; set; }
+        public DbSet<Blogger> Bloggers { get; set; }
     }
 }
