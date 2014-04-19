@@ -11,8 +11,10 @@ namespace BLOG.Models
         public String NickName { get; set; }
         public String password { get; set; }
         public String Name { get; set; }
+        public String Ocupacion { get; set; }
         public String SocialNet1 { get; set; }
         public String SocialNet2 { get; set; }
+        
 
     }
 }

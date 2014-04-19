@@ -1,0 +1,30 @@
+namespace BLOG.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class InitialCreate : DbMigration
+    {
+        public override void Up()
+        {
+            CreateTable(
+                "dbo.Bloggers",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        NickName = c.String(),
+                        password = c.String(),
+                        Name = c.String(),
+                        SocialNet1 = c.String(),
+                        SocialNet2 = c.String(),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+        }
+        
+        public override void Down()
+        {
+            DropTable("dbo.Bloggers");
+        }
+    }
+}

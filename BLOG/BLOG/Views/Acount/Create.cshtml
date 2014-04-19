@@ -1,14 +1,16 @@
 ﻿@{
     ViewBag.Title = "Create";
 }
-<meta name="viewport" content="width=device-width" />
     
         
         @Styles.Render("~/Styles/Bootstrap.css", "~/Styles/Bootstrap.min.css")
         @Styles.Render("~/Styles/Style.css")
 
+
+
 @using (Html.BeginForm()) {
-  <form class="form-horizontal">
+  <meta name="viewport" content="width=device-width" />
+    <form class="form-horizontal">
 
       
       <fieldset>
@@ -41,6 +43,13 @@
             
           </div>
         </div><br><br>
+          <div class="form-group">
+          <label for="Ocupation" class="col-lg-2 control-label">Ocupation</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="Ocupation" name ="Ocupation" placeholder="Ocupation">
+            
+          </div>
+        </div><br><br>
         <div class="form-group">
           <label for="SN1" class="col-lg-2 control-label">Social NetWork</label>
           <div class="col-lg-10">
@@ -59,7 +68,8 @@
           
             <div class="form-group">
               <div class="col-lg-10 col-lg-offset-2">
-                  <input type="submit" value="Create" class="btn btn-primary" >
+              
+              <input type="submit" value="Create" class="btn btn-primary" >
               
               <button class="btn btn-default">Cancel</button>
 
