@@ -1,0 +1,68 @@
+﻿@model BLOG.Models.Blogger
+@{
+    ViewBag.Title = "Information";
+    Layout = "~/Views/Shared/_LayoutAdmFrontend.cshtml";
+}
+@*@{
+
+    if (ViewBag.Pic == 3)
+
+    {  
+        if (Model.Image != null)
+
+        {
+            WebImage wi = new WebImage(Model.Image);
+
+            wi.Resize(700, 700,true, true);
+
+            wi.Write();
+
+
+        }    
+    }
+}
+
+@if (Model.Image != null)
+
+{
+    <img alt="tag" src="@Url.Content("/Acount/Information?id=" + Model.ID + "&img=1")"/>  
+    
+}*@
+  @Styles.Render("~/Styles/Bootstrap.css", "~/Styles/Bootstrap.min.css")
+        @Styles.Render("~/Styles/Style.css")
+
+@using (Html.BeginForm()) 
+
+{
+    
+    <div id="InfoContent">
+        
+        
+
+       <fieldset>
+        
+           <legend>Information´s Blogger</legend><br>
+          
+          @foreach (var item in ViewBag.Bloggers)
+          {
+                 
+              
+             <label class="labelInfo">Nick Name :</label> <label class="labelInfo">@item.NickName   </label><br>
+              <label class="labelInfo">Name :</label> <label class="labelInfo">@item.Name   </label><br>
+              <label class="labelInfo">Ocupation :</label> <label class="labelInfo">@item.Ocupacion   </label><br>
+              <label class="labelInfo">Social Network :</label> <label class="labelInfo"><a href="@item.SocialNet1">Social Networ1 </a></label><br>
+              <label class="labelInfo">Social Network 2 :</label> <label class="labelInfo"><a href="@item.SocialNet2">Social Networ2 </a></label><br>    
+          
+          
+                <div class="EditSite">
+                    <a href="/Acount/Edit/@item.ID" class="btn btn-warning"> Edit Information</a>
+                </div><br>
+          } 
+           
+            
+       </fieldset>
+        
+
+    </div>
+    
+}

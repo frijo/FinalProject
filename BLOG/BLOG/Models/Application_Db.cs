@@ -14,5 +14,6 @@ namespace BLOG.Models
 
         }
         public DbSet<Blogger> Bloggers { get; set; }
+        public DbSet<InformationBlog> InformationBlogs { get; set; }
     }
 }

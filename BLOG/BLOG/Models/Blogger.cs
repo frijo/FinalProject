@@ -22,7 +22,7 @@ namespace BLOG.Models
         public String Ocupacion { get; set; }
         public String SocialNet1 { get; set; }
         public String SocialNet2 { get; set; }
-        
+        //public byte[] Image { get; set; }
 
     }
 }

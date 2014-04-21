@@ -16,7 +16,7 @@ namespace BLOG
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Acount", action = "Create", id = UrlParameter.Optional }
+                defaults: new { controller = "AboutBlog", action = "Create", id = UrlParameter.Optional }
             );
         }
     }

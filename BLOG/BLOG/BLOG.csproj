@@ -164,6 +164,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AboutBlogController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AcountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -178,6 +179,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Blogger.cs" />
     <Compile Include="Models\Application_Db.cs" />
+    <Compile Include="Models\InformationBlog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -296,9 +298,12 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmFrontend.cshtml" />
     <Content Include="Views\User_Frontend\Index.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Acount\Create.cshtml" />
     <Content Include="Views\Acount\Login.cshtml" />
+    <Content Include="Views\Acount\Information.cshtml" />
+    <Content Include="Views\Shared\_LayoutOP2.cshtml" />
+    <Content Include="Views\Acount\Edit.cshtml" />
+    <Content Include="Views\AboutBlog\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
