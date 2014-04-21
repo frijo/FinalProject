@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUserFrontend.cshtml";
+}
+  @Styles.Render("~/Styles/Bootstrap.css", "~/Styles/Bootstrap.min.css")
+  @Styles.Render("~/Styles/Style.css")
+  @Styles.Render("~/Styles/Style2.css")
+
+@using (Html.BeginForm())
+{
+    <div class="BlogsContent">
+       
+
+       <fieldset>
+        
+           <legend>Blogs</legend><br>
+
+           @foreach (var item in ViewBag.Blogs)
+           {
+                 
+               <div class="BlogContainer" onclick=funciom_ShowContent()>  
+                <label>@item.Title</label> <label class="BlogDate">@item.Date</label>
+                <br><br><br>
+                <textarea rows="15"  class="form-control"  id="Content" name="Content" disabled >@item.Content</textarea>  
+                
+               @*<button type="button" class="btn btn-default" onclick= "funciom_HideContent()" > Hide </button>*@
+               </div>
+               <br>
+               
+           }
+
+
+       </fieldset>
+    </div>
+}    

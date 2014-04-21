@@ -20,7 +20,13 @@ namespace BLOG.Controllers
             
             return View();
         }
-        
+        public ActionResult IndexUser()
+        {
+            List<BLOGS> Blog = db.Blogs.ToList();
+            ViewBag.Blogs = Blog;
+
+            return View();
+        }
         public ActionResult Create()
         {
             return View();

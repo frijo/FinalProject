@@ -307,7 +307,6 @@
     <Content Include="Views\Acount\Create.cshtml" />
     <Content Include="Views\Acount\Login.cshtml" />
     <Content Include="Views\Acount\Information.cshtml" />
-    <Content Include="Views\Shared\_LayoutOP2.cshtml" />
     <Content Include="Views\Acount\Edit.cshtml" />
     <Content Include="Views\AboutBlog\Create.cshtml" />
     <Content Include="Views\AboutBlog\Edit.cshtml" />
@@ -316,6 +315,10 @@
     <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="Views\Blog\Edit.cshtml" />
     <Content Include="Views\Blog\Delete.cshtml" />
+    <Content Include="Views\AboutBlog\IndexUser.cshtml" />
+    <Content Include="Views\Acount\IndexUser.cshtml" />
+    <Content Include="Views\Blog\IndexUser.cshtml" />
+    <Content Include="Views\Shared\_LayoutUserFrontend.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

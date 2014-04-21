@@ -1,0 +1,40 @@
+﻿@model BLOG.Models.Blogger
+@{
+    ViewBag.Title = "Information";
+    Layout = "~/Views/Shared/_LayoutUserFrontend.cshtml";
+}
+  @Styles.Render("~/Styles/Bootstrap.css", "~/Styles/Bootstrap.min.css")
+        @Styles.Render("~/Styles/Style.css")
+
+@using (Html.BeginForm()) 
+
+{
+    
+    <div class="InfoContent">
+        
+        
+
+       <fieldset>
+        
+           <legend>Information´s Blogger</legend><br>
+          
+          @foreach (var item in ViewBag.Bloggers)
+          {
+                 
+              
+              <label class="labelInfo">Nick Name :</label> <label class="labelInfo">@item.NickName   </label><br>
+              <label class="labelInfo">Name :</label> <label class="labelInfo">@item.Name   </label><br>
+              <label class="labelInfo">Ocupation :</label> <label class="labelInfo">@item.Ocupacion   </label><br>
+              <label class="labelInfo">Social Network :</label> <label class="labelInfo"><a href="@item.SocialNet1">Social Networ1 </a></label><br>
+              <label class="labelInfo">Social Network 2 :</label> <label class="labelInfo"><a href="@item.SocialNet2">Social Networ2 </a></label><br>    
+          
+                          
+          } 
+           
+            
+       </fieldset>
+        
+
+    </div>
+    
+}

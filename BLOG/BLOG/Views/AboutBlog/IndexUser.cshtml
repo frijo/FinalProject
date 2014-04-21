@@ -1,6 +1,6 @@
 ﻿@{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_LayoutAdmFrontend.cshtml";
+    Layout = "~/Views/Shared/_LayoutUserFrontend.cshtml";
 }
   @Styles.Render("~/Styles/Bootstrap.css", "~/Styles/Bootstrap.min.css")
   @Styles.Render("~/Styles/Style.css")
@@ -15,7 +15,7 @@
 
        <fieldset>
         
-           <legend>Information´s Blogger</legend><br>
+           <legend> Blogger´s Information</legend><br>
           
           @foreach (var item in ViewBag.InfoBlogs)
           {
@@ -25,11 +25,8 @@
               <label class="labelInfo">Detail :</label> <label class="labelInfo">@item.Detail   </label><br><br>
                    
           
-                <div class="EditSite">
-                    <a href="/AboutBlog/Edit/@item.Id" class="btn btn-warning"> Edit Blog</a>
-                </div>
-                <br>
-          } 
+                
+                          } 
            
             
        </fieldset>
@@ -39,17 +36,4 @@
     
 }
 
-@*<script src="~/Scripts/jquery-1.7.1.js"></script>
-<script type="text/javascript">
 
-			    $("#liBlog").removeClass("liBlog");
-			    $("#liComments").removeClass("liComments");
-
-			    $("#liAbBlog").removeClass("liAbBlog");
-			    $("#liLgt").removeClass("liLgt");
-			  
-			    $("#liInfo").addClass("liInfo");
-
-
-
- </script>*@

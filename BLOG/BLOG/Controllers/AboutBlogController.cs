@@ -22,6 +22,16 @@ namespace BLOG.Controllers
             ViewBag.InfoBlogs = InfoBlog;
             return View();
         }
+        public ActionResult IndexUser()
+        {
+
+            List<InformationBlog> InfoBlog = db.InformationBlogs.ToList();
+            ViewBag.InfoBlogs = InfoBlog;
+            return View();
+        }
+
+
+
         public ActionResult Create()
         {
             return View();

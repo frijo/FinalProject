@@ -28,6 +28,14 @@ namespace BLOG.Controllers
             return View();
 
         }
+        public ActionResult IndexUser()
+        {
+            List<Blogger> blogger = db.Bloggers.ToList();
+            ViewBag.Bloggers = blogger;
+
+            return View();
+
+        }
         [HttpPost]
         public ActionResult Information(int id, int img)
         {
@@ -134,27 +142,37 @@ namespace BLOG.Controllers
         [HttpPost]
         public ActionResult Edit(int id = 0, String NickName = "", String Password = "", String Name = "", String SN1 = "", String SN2 = "", String Ocupation = "")
         {
-            var passCryp = new SimpleCrypto.PBKDF2();
-            var crypPass = passCryp.Compute(Password);
 
-            if (ModelState.IsValid)
+            if (NickName != "" && Password != "" && Name != "")
             {
-                Blogger blog = db.Bloggers.Find(id);
-                
+                var passCryp = new SimpleCrypto.PBKDF2();
+                var crypPass = passCryp.Compute(Password);
 
-                blog.NickName=NickName;
-                blog.Name = Name;
-                blog.password = crypPass;
-                blog.passwordSalt = passCryp.Salt;
-                blog.Ocupacion = Ocupation;
-                blog.SocialNet1 = SN1;
-                blog.SocialNet2 = SN2;
+                if (ModelState.IsValid)
+                {
+                    Blogger blog = db.Bloggers.Find(id);
 
-                db.Entry(blog).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Information");
+
+                    blog.NickName = NickName;
+                    blog.Name = Name;
+                    blog.password = crypPass;
+                    blog.passwordSalt = passCryp.Salt;
+                    blog.Ocupacion = Ocupation;
+                    blog.SocialNet1 = SN1;
+                    blog.SocialNet2 = SN2;
+
+                    db.Entry(blog).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Information");
+                }
             }
-
+            else
+            {
+                ModelState.AddModelError("Acount", " Error, incorrect fields");
+            }
+            
+            
+            
             return View();
         }
         
@@ -163,8 +181,6 @@ namespace BLOG.Controllers
             return View();
         }
         [HttpPost]
-
-
         public ActionResult Login(String LoginUser = "", String LoginPass = "")
         {
             if (ModelState.IsValid)
@@ -172,7 +188,7 @@ namespace BLOG.Controllers
                 if (IsValid(LoginUser, LoginPass))
                 {
                     FormsAuthentication.SetAuthCookie(LoginUser, false);
-                    return RedirectToAction("Index", "Admin");
+                    return RedirectToAction("Index", "Blog");
 
                 }
                 else 
@@ -182,7 +198,16 @@ namespace BLOG.Controllers
             }
             return View();
         }
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("IndexUser","Blog");
+        }
 
+        private ActionResult RedirectToAction()
+        {
+            throw new NotImplementedException();
+        }
 
         private bool IsValid(String NickName, String Password)
         {
