@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmFrontend.cshtml";
+}
+  @Styles.Render("~/Styles/Bootstrap.css", "~/Styles/Bootstrap.min.css")
+  @Styles.Render("~/Styles/Style.css")
+
+@using (Html.BeginForm()) 
+
+{
+    
+    <div class="InfoContent">
+        
+        
+
+       <fieldset>
+        
+           <legend>Information´s Blogger</legend><br>
+          
+          @foreach (var item in ViewBag.InfoBlogs)
+          {
+                 
+              
+              <label class="labelInfo">Name´s Blog :</label> <label class="labelInfo">@item.Name   </label><br>
+              <label class="labelInfo">Detail :</label> <label class="labelInfo">@item.Detail   </label><br><br>
+                   
+          
+                <div class="EditSite">
+                    <a href="/AboutBlog/Edit/@item.Id" class="btn btn-warning"> Edit Blog</a>
+                </div>
+                <br>
+          } 
+           
+            
+       </fieldset>
+        
+
+    </div>
+    
+}
+

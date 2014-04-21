@@ -19,10 +19,10 @@ body {
 
 }
 
-#InfoContent {
+.InfoContent {
 
     width:800px;
-    height:500px;
+    height:auto;
     background-color:rgba(255, 255, 255, 0.63);
     margin-left: 270px;
     padding-top:15px;
@@ -31,6 +31,48 @@ body {
 
 
 }
+.BlogsContent 
+{
+    width:1200px;
+    height:auto;
+    background-color:rgba(255, 255, 255, 0.63);
+    margin-left: 80px;
+    padding-top:15px;
+    padding-right:15px;
+    padding-left:15px;
+     padding-bottom:15px;
+}
+
+
+
+
+.BlogContainer {
+    width:1000px;
+    
+    background-color:rgba(194, 187, 187, 0.39);
+    margin-left: 90px;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-right:15px;
+    padding-left:15px;
+
+    height:60px;
+    overflow:hidden;
+   
+   
+
+    
+}
+.BlogContainer:hover {
+    height:auto;
+ }
+
+#lblDelete {
+font-size:18px;
+
+}
+
+
 .form-Image {
     margin-left:250px;
 }
@@ -51,4 +93,16 @@ body {
 
     font-size:26px;
     padding:10px;
+}
+#Content {
+width:650px;
+
+}
+.BlogDate {
+
+margin-left:300px;
+padding-right:220px;
+}
+.btn btn-warning {
+  padding-right:200px;
 }

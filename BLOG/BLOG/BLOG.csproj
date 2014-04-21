@@ -167,6 +167,7 @@
     <Compile Include="Controllers\AboutBlogController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AcountController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -179,6 +180,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Blogger.cs" />
     <Compile Include="Models\Application_Db.cs" />
+    <Compile Include="Models\BLOGS.cs" />
     <Compile Include="Models\InformationBlog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -259,6 +261,7 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -270,7 +273,10 @@
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Styles\Bootstrap.css" />
     <Content Include="Styles\Bootstrap.min.css" />
+    <Content Include="Styles\calendar-blue.css" />
+    <Content Include="Styles\Calendario.css" />
     <Content Include="Styles\Style.css" />
+    <Content Include="Styles\Style2.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -304,6 +310,12 @@
     <Content Include="Views\Shared\_LayoutOP2.cshtml" />
     <Content Include="Views\Acount\Edit.cshtml" />
     <Content Include="Views\AboutBlog\Create.cshtml" />
+    <Content Include="Views\AboutBlog\Edit.cshtml" />
+    <Content Include="Views\AboutBlog\Index.cshtml" />
+    <Content Include="Views\Blog\Create.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\Edit.cshtml" />
+    <Content Include="Views\Blog\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

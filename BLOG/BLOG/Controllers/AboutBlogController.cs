@@ -1,6 +1,7 @@
 ﻿using BLOG.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -16,6 +17,9 @@ namespace BLOG.Controllers
 
         public ActionResult Index()
         {
+
+            List<InformationBlog> InfoBlog = db.InformationBlogs.ToList();
+            ViewBag.InfoBlogs = InfoBlog;
             return View();
         }
         public ActionResult Create()
@@ -46,10 +50,27 @@ namespace BLOG.Controllers
 
         public ActionResult Edit(int id=0)
         {
+            InformationBlog blog = db.InformationBlogs.Find(id);
+            if (blog == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.Info_Blogs = blog;
             return View();
         }
-        public ActionResult Edit(int id=0 ,String Name="", String Detail="")
+        [HttpPost]
+        public ActionResult Edit(int id = 0, String NameBlog = "", String Detail = "")
         {
+            if (ModelState.IsValid)
+            {
+                InformationBlog blog = db.InformationBlogs.Find(id);
+                blog.Name = NameBlog;
+                blog.Detail = Detail;
+
+                db.Entry(blog).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
             return View();
         }
 

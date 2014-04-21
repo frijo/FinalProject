@@ -3,31 +3,6 @@
     ViewBag.Title = "Information";
     Layout = "~/Views/Shared/_LayoutAdmFrontend.cshtml";
 }
-@*@{
-
-    if (ViewBag.Pic == 3)
-
-    {  
-        if (Model.Image != null)
-
-        {
-            WebImage wi = new WebImage(Model.Image);
-
-            wi.Resize(700, 700,true, true);
-
-            wi.Write();
-
-
-        }    
-    }
-}
-
-@if (Model.Image != null)
-
-{
-    <img alt="tag" src="@Url.Content("/Acount/Information?id=" + Model.ID + "&img=1")"/>  
-    
-}*@
   @Styles.Render("~/Styles/Bootstrap.css", "~/Styles/Bootstrap.min.css")
         @Styles.Render("~/Styles/Style.css")
 
@@ -35,7 +10,7 @@
 
 {
     
-    <div id="InfoContent">
+    <div class="InfoContent">
         
         
 

@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Create";
+}
+
+@Styles.Render("~/Styles/Bootstrap.css", "~/Styles/Bootstrap.min.css")
+@Styles.Render("~/Styles/Style.css")
+
+
+<meta name="viewport" content="width=device-width" />
+    <form class="form-horizontal" method="post" enctype="multipart/form-data">
+
+      
+      <fieldset>
+        <legend>Delete Blog</legend>
+            
+          <label id="lblDelete">You want Delete this blog ?</label>
+          
+            <div class="form-group">
+              <label for="Title" class="col-lg-2 control-label">Title</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" id="Title" name="Title" disabled value ="@ViewBag.blog.Title" >
+              </div>
+            </div>
+
+
+            <
+
+          
+          
+        
+         
+            
+          
+            <div class="form-group">
+              <div class="col-lg-10 col-lg-offset-2">
+              
+              <input type="submit" value="Delete" class="btn btn-danger" >
+              
+              @Html.ActionLink("Go Back", "Index")
+
+              </div>
+            </div>
+          </fieldset>
+        
+      </form>
+
